@@ -4,25 +4,25 @@ package com.Madpoints;
 // PC class does does not extend any classes
 // Instead it calls them in making its own objects
 public class PC {
-    private Case aCase;
-    private Monitor monitors;
-    private Motherboard aMotherboard;
+    private Case theCase;
+    private Monitor theMonitor;
+    private Motherboard theMotherboard;
 
-    public PC(Case aCase, Monitor monitors, Motherboard aMotherboard) {
-        this.aCase = aCase;
-        this.monitors = monitors;
-        this.aMotherboard = aMotherboard;
+    public PC(Case theCase, Monitor theMonitor, Motherboard theMotherboard) {
+        this.theCase = theCase;
+        this.theMonitor = theMonitor;
+        this.theMotherboard = theMotherboard;
     }
 
-    public Case getaCase() {
-        return aCase;
+    public Case getTheCase() {
+        return theCase;
     }
 
-    public Monitor getMonitors() {
-        return monitors;
+    public Monitor getTheMonitor() {
+        return theMonitor;
     }
 
-    public Motherboard getaMotherboard() {
-        return aMotherboard;
+    public Motherboard getTheMotherboard() {
+        return theMotherboard;
     }
 }
