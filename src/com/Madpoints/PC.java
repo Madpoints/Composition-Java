@@ -7,22 +7,24 @@ public class PC {
     private Case theCase;
     private Monitor theMonitor;
     private Motherboard theMotherboard;
+    private boolean isOn;
 
     public PC(Case theCase, Monitor theMonitor, Motherboard theMotherboard) {
         this.theCase = theCase;
         this.theMonitor = theMonitor;
         this.theMotherboard = theMotherboard;
+
     }
 
-    public Case getTheCase() {
-        return theCase;
+    public void powerUp() {
+        theCase.pressPowerButton();
+
+        if (theCase.isOn()) {
+            drawLogo();
+        }
     }
 
-    public Monitor getTheMonitor() {
-        return theMonitor;
-    }
-
-    public Motherboard getTheMotherboard() {
-        return theMotherboard;
+    private void drawLogo() {
+        theMonitor.drawPixelAt(1200, 50, "yellow");
     }
 }
